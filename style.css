@@ -67,29 +67,32 @@ p {
   margin-left: 10px;
 }
 
-.nav__bottom-1 {
+.nav__bottom {
   background-color: #273044;
   color: white;
   display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
+  gap: 20px;
   justify-content: center;
 }
-div ul li {
-  display: flex;
-  height: 81px;
-  font-family: "Open Sans", sans-serif;
+.nav__bottom > ul >li {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
+  list-style: none;
   padding: 1rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
-div ul li:hover {
+.nav__bottom ul li:hover {
   background-color: #3f6b83;
   cursor: pointer;
 }
-div ul li span {
+.nav__bottom ul li span {
   margin: 5px;
 }
-div ul li i {
+.nav__bottom ul li i {
   font-size: 1.5rem;
   opacity: 0.8;
 }

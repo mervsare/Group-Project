@@ -67,16 +67,25 @@ p {
   margin-left: 10px;
 }
 
-.nav__bottom {
+.nav__bottom--web {
   background-color: #273044;
   color: white;
   display: flex;
   gap: 20px;
   justify-content: center;
 }
-.nav__bottom > ul >li {
+.nav__bottom--web >ul{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.nav__bottom--web > ul >li {
   display: inline-flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
   padding: 1rem;
@@ -85,33 +94,68 @@ p {
   text-transform: uppercase;
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
-.nav__bottom ul li:hover {
+.nav__bottom--web ul li:hover {
   background-color: #3f6b83;
   cursor: pointer;
 }
-.nav__bottom ul li span {
+.nav__bottom--web ul li span {
   margin: 5px;
 }
-.nav__bottom ul li i {
+.nav__bottom--web ul li i {
   font-size: 1.5rem;
   opacity: 0.8;
 }
+.nav__bottom--mobile {
+  display: none;
+}
 
+/* TODO : Make search button responsive with the nav bar */
+@media screen and (max-width: 768px) {
+  .nav__bottom--mobile{
+    display: flex;
+    background-color: #273044;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav__bottom--web {
+    display: none;
+  }
+  .nav__bottom--mobile ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .nav__bottom--mobile ul li {
+    display: inline-flex;
+    color: white;
+    list-style: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  }
 
+  .nav__bottom--mobile ul li:hover {
+    background-color: #3f6b83;
+    cursor: pointer;
+  }
 
+  .nav__bottom--mobile ul li span {
+    margin: 5px;
+  }
 
+  .nav__bottom--mobile ul li i {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    margin-right: 10px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
+  
+}
 
 
 
